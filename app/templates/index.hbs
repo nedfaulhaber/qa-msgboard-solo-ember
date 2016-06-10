@@ -1,7 +1,12 @@
-<h3>Type Your Questions Here: </h3>
+<h4>Select the questions below to see details and provide answers...</h4>
+<br>
+
+<h3>Recent Queries:</h3>
 
 <ul>
   {{#each model as |question|}}
     {{question-tile question=question}}
   {{/each}}
 </ul>
+
+{{new-question saveNewQuestion2="saveNewQuestion3"}}
