@@ -1,3 +1,9 @@
 <h2>Let the Fountain of Knowledge Spring Forth!</h2>
 
-{{edit-question question=model edit="edit"}}
+<h4>Some Answers to {{model.author}}'s Question</h4>
+<br>
+<br>
+
+{{question-detail-answers question=model destroyQuestion="destroyQuestion"}}<br>
+
+{{edit-question question=model question="question"}}
