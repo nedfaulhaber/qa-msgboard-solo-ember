@@ -4,17 +4,18 @@ export default Ember.Route.extend({
   model(params) {
     return this.store.findRecord('question', params.question_id);
   },
+
   actions: {
-    editParent(question, params) {
+    edit(question, params) {
       Object.keys(params).forEach(function(key) {
         if(params[key]!==undefined) {
-          question.set(key, params[key]);
+          question.set(key,params[key]);
         }
       });
       question.save();
     },
 
-    destroyQuestion (question) {
+    destroyQuestion(question) {
       question.destroyQuestion();
       this.transitionTo('index');
     }
