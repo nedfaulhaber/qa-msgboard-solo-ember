@@ -1,7 +1,16 @@
+
+
 <h3>Question: {{question.ask}}</h3>
 <h4>From Curious User: {{question.author}}</h4>
-<h4>Additional Notes: {{question.notes}}</h4>
+<h4>Additional Notes: {{question.notes}}</h4><br>
 
 
+
+
+{{edit-question question=question edit="edit"}}<br>
 
 <button {{action 'delete' question}}>Delete this Question</button>
+
+<!-- {{user-answers answer=answer}} -->
+
+{{new-answer saveNewAnswer2="saveNewAnswer3" question=model}}

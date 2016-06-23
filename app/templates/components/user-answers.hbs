@@ -1,0 +1,7 @@
+<!-- <h3>Some Answers to {{question.author}}'s Question:</h3> -->
+<ol>
+  {{#each question.answers as |answer|}}
+  <li>User: {{answer.user}}</li><br>
+  <li>Proffered Wisdom: {{answer.content}}</li>
+  {{/each}}
+</ol>
