@@ -14,10 +14,6 @@ export default Ember.Component.extend({
       if (confirm('Are you sure you want to delete this question?')) {
         this.sendAction('destroyQuestion', question);
       }
-    },
-    saveNewAnswer3(params) {
-      var newAnswer = this.store.createRecord('answer', params);
-      newAnswer.save();
     }
   }
 });

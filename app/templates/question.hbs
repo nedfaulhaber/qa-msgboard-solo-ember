@@ -1,3 +1,15 @@
 <h2>Let the Fountain of Knowledge Spring Forth!</h2>
 
 {{question-detail-answers question=model destroyQuestion="destroyQuestion"}}<br>
+
+<h3>Some Answers to {{model.author}}'s Question:</h3>
+
+  {{#each model.answers as |answer|}}
+  <h4>User: </h4><h5>{{answer.user}}</h5>
+  <h4>Proffered Wisdom: </h4><h5>{{answer.content}}</h5>
+  <hr>
+  {{/each}}
+
+
+
+{{new-answer saveNewAnswer2="saveNewAnswer3" question=model}}
